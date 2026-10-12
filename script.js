@@ -12,12 +12,11 @@ async function baterPonto() {
     mensagemEl.innerText = 'Registrando...';
 
     try {
-        const resposta = await fetch("https://bate-ponto-server.onrender.com/api/ponto", {
+        // Em vez de 'http://localhost:3000/api/ponto', usa o link completo:
+        const resposta = await fetch('https://bate-ponto-server.onrender.com/api/ponto', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ nome: matricula })
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ nome })
         });
 
         const dados = await resposta.json();
