@@ -20,7 +20,7 @@ async function baterPonto() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ nome: matricula }) // Mudou de 'matricula' para 'nome'
+            body: JSON.stringify({ nome: matricula }) // Aqui está o segredo: envia a chave 'nome'
         });
 
         const dados = await resposta.json();
