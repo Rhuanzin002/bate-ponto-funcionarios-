@@ -12,15 +12,12 @@ async function baterPonto() {
     mensagemEl.innerText = 'Registrando...';
 
     try {
-        // ATENÇÃO: Troque pelo endereço do seu backend quando ele estiver rodando
-        JavaScript
-
         const resposta = await fetch("https://bate-ponto-server.onrender.com/api/ponto", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ nome: matricula }) // Aqui está o segredo: envia a chave 'nome'
+            body: JSON.stringify({ nome: matricula })
         });
 
         const dados = await resposta.json();
