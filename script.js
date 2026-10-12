@@ -16,7 +16,7 @@ async function baterPonto() {
         const resposta = await fetch('https://bate-ponto-server.onrender.com/api/ponto', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ nome })
+            body: JSON.stringify({ nome: matricula }) // <--- Alterado para enviar a matrícula como 'nome'
         });
 
         const dados = await resposta.json();
