@@ -13,12 +13,14 @@ async function baterPonto() {
 
     try {
         // ATENÇÃO: Troque pelo endereço do seu backend quando ele estiver rodando
+        JavaScript
+
         const resposta = await fetch("https://bate-ponto-server.onrender.com/api/ponto", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ matricula })
+            body: JSON.stringify({ nome: matricula }) // Mudou de 'matricula' para 'nome'
         });
 
         const dados = await resposta.json();
