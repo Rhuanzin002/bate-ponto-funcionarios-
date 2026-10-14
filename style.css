@@ -30,6 +30,22 @@ h2 {
     color: #38bdf8;
 }
 
+.camera-container {
+    background-color: #0f172a;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    margin-bottom: 20px;
+}
+
+.camera-container video, 
+.camera-container img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 .input-group {
     margin-bottom: 20px;
     text-align: left;
@@ -72,6 +88,18 @@ button {
 
 button:hover {
     background-color: #0ea5e9;
+}
+
+#btn-tirar-foto {
+    background-color: #334155;
+    color: #f8fafc;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#btn-tirar-foto:hover {
+    background-color: #475569;
 }
 
 #mensagem {

@@ -10,11 +10,21 @@
 
     <div class="card">
         <h2>Registro de Ponto</h2>
+        
+        <!-- Área da Câmera / Selfie -->
+        <div class="camera-container" style="margin-bottom: 20px;">
+            <video id="video" width="100%" autoplay playsinline style="border-radius: 8px; display: none; background: #000;"></video>
+            <canvas id="canvas" style="display: none;"></canvas>
+            <img id="foto-preview" src="" alt="Selfie" style="display: none; width: 100%; border-radius: 8px; margin-bottom: 10px;" />
+            <button type="button" id="btn-tirar-foto" onclick="tirarFoto()" style="background-color: #334155; color: #f8fafc; margin-top: 10px;">Ligar Câmera / Tirar Selfie</button>
+        </div>
+
         <div class="input-group">
             <label for="matricula">digite seu nome:</label>
             <input type="text" id="matricula" placeholder="Digite seu nome">
         </div>
-        <button onclick="baterPonto()">Bater Ponto</button>
+        
+        <button onclick="baterPonto()" id="btn-bater" disabled style="opacity: 0.6; cursor: not-allowed;">Bater Ponto</button>
         <p id="mensagem"></p>
     </div>
 
